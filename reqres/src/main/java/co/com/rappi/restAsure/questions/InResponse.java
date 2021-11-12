@@ -24,13 +24,13 @@ public class InResponse implements Question<Boolean> {
         String origin = actor.recall(URLREQUESTED);
 
         switch (origin.toLowerCase()){
-            case "api/users?page=2":
+            case LIST_USERS:
                 ResponseLstUsers respLstUser = actor.recall(BODYRESP);
                 return respLstUser.getSupport().getUrl();
-            case "api/users/2":
+            case SINGLE_USER:
                 ResponseSingleUser respUser = actor.recall(BODYRESP);
                 return respUser.getSupport().getUrl();
-            case "api/unknown":
+            case LIST_RESOURCES:
                 ResponseLstResources respLstReso = actor.recall(BODYRESP);
                 return respLstReso.getSupport().getUrl();
             default:

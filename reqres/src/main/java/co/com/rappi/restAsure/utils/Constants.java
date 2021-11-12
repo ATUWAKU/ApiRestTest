@@ -13,6 +13,9 @@ public class Constants {
     public static final int SUCCRESPCODE = 200;
     public static final String MSGEXCCODE = "El código de respuesta de la API no fue " + SUCCRESPCODE;
     public static final String MSGEXCBODY = "El campo Support.Url no corresponde a " + URLRESPONSE;
+    public static final String SINGLE_USER = "api_consult_single_user";
+    public static final String LIST_RESOURCES = "api_list_resources";
+    public static final String LIST_USERS = "api_list_users";
 
 
 

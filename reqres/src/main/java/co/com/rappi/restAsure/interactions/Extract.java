@@ -27,15 +27,15 @@ public class Extract implements Interaction {
     public <T extends Actor> void performAs(T actor) {
 
         switch (url.toLowerCase()){
-            case "api/users?page=2":
+            case LIST_USERS:
                 ResponseLstUsers respLstUser = SerenityRest.lastResponse().jsonPath().getObject("",ResponseLstUsers.class);
                 actor.remember(BODYRESP,respLstUser);
                 break;
-            case "api/users/2":
+            case SINGLE_USER:
                 ResponseSingleUser respUser = SerenityRest.lastResponse().jsonPath().getObject("",ResponseSingleUser.class);
                 actor.remember(BODYRESP,respUser);
                 break;
-            case "api/unknown":
+            case LIST_RESOURCES:
                 ResponseLstResources respLstReso = SerenityRest.lastResponse().jsonPath().getObject("",ResponseLstResources.class);
                 actor.remember(BODYRESP,respLstReso);
                 break;

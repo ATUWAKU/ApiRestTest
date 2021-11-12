@@ -27,10 +27,10 @@ public class ListUsers {
     }
 
     @When("^The system consumes the (.*) api$")
-    public void theSystemConsumesTheUserListingApi(String url) {
+    public void theSystemConsumesTheUserListingApi(String api) {
         theActorCalled(NAME_ACTOR).attemptsTo(
-                Consume.api(url),
-                Extract.response(url)
+                Consume.api(api),
+                Extract.response(api)
         );
 
 
